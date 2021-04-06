@@ -1,0 +1,138 @@
+.about {
+  padding-top: 270px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    padding-top: 302px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 320px;
+    padding-bottom: 130px;
+  }
+}
+
+.about__title {
+  @include section-title($primary-text-color);
+}
+
+.about__wrap {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.about__img {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    width: 243px;
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 530px;
+  }
+}
+
+.about__wrap-content {
+  position: relative;
+}
+
+.about__name-title {
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+
+  @media (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 1.223;
+  }
+}
+
+.about__list {
+  position: relative;
+  padding: 30px 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  letter-spacing: 0.06em;
+
+  color: $primary-text-color;
+
+  @media (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.about__list::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $secondary-text-color;
+}
+
+.about__list::after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: 0;
+  width: 20px;
+  height: 2px;
+  background-color: $accent-color;
+}
+
+.about__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.about__item {
+  display: flex;
+}
+
+.about__item::before {
+  content: '';
+  min-width: 18px;
+  height: 14px;
+  margin-right: 9px;
+  background-image: url('../images/icons-svg/chek.svg');
+}
+
+.about__text {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.667;
+  color: $secondary-text-color;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
+
+    font-size: 18px;
+    line-height: 1.556;
+  }
+}
+
+.about__last-text {
+  @media screen and (max-width: 1343px) {
+    margin-bottom: 10px;
+  }
+}
+
+.about__link {
+  color: $accent-color;
+  text-decoration: underline;
+  margin-bottom: 0;
+}

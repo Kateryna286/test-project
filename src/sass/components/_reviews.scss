@@ -1,0 +1,293 @@
+.review {
+  @include flex-center;
+  padding: 50px 0 224px 0;
+}
+
+.section__title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media (min-width: $tablet) {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.308;
+    letter-spacing: 0.03em;
+  }
+
+  @media (min-width: $desktop) {
+    @include section-title-desktop($primary-text-color);
+  }
+}
+
+.slider {
+  position: relative;
+  @include flex-center;
+
+  height: auto;
+  margin-top: 20px;
+
+  @media (min-width: $tablet) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 50px;
+  }
+}
+
+.slick-initialized .slick-slide {
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  @media (min-width: $tablet) {
+    @include flex-center;
+    width: 688px;
+    padding: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1090px;
+    padding: 50px 100px;
+  }
+}
+
+.slider__img--box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    margin-right: 46px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 40px;
+  }
+}
+
+.slider__img {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 20px auto;
+  @media (min-width: $desktop) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.slider__icon {
+  margin-left: 50%;
+  transform: translatex(-50%);
+  fill: #436eab;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.slider__title {
+  margin-bottom: 10px;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.214;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: $accent-color;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 1.233;
+  }
+}
+
+.slider__sign {
+  margin-bottom: 10px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: $secondary-text-color;
+
+  @media (min-width: $tablet) {
+    width: 412px;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    width: 438px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.214;
+  }
+}
+
+.slider__description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.667;
+  text-align: center;
+  color: $third-text-color;
+
+  @media (min-width: $tablet) {
+    width: 412px;
+    font-size: 12px;
+    line-height: 1.667;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    width: 706px;
+    font-size: 18px;
+    line-height: 1.556;
+  }
+}
+
+.slider__link {
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+.slick-next.slick-arrow {
+  top: 104%;
+  right: 0px;
+
+  background-image: url(../images/icons-svg/reviews-arrow-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+
+  @media (min-width: $tablet) {
+    top: 48%;
+    right: -15px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 58%;
+    right: -82px;
+  }
+}
+
+.slick-prev.slick-arrow {
+  top: 104%;
+  left: 0;
+
+  background-image: url(../images/icons-svg/reviews-arrow-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 25px;
+  height: 25px;
+
+  @media (min-width: $tablet) {
+    top: 48%;
+    left: -15px;
+  }
+  @media (min-width: $desktop) {
+    top: 58%;
+    left: -82px;
+  }
+}
+
+.slick-prev.slick-arrow::before,
+.slick-next.slick-arrow::before {
+  content: '';
+}
+
+.slick-dots {
+  bottom: -94px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $desktop) {
+    width: 558px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.slick-dots li {
+  width: 54px;
+  height: 54px;
+
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $accent-color;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & button {
+    &::before {
+      content: '';
+    }
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &:first-child button {
+    background-image: url(../images/reviews2.jpg);
+  }
+
+  &:nth-child(2) button {
+    background-image: url(../images/reviews3.jpg);
+  }
+
+  &:nth-child(3) button {
+    background-image: url(../images/reviews4.jpg);
+  }
+
+  &:nth-child(4) button {
+    background-image: url(../images/reviews5.jpg);
+  }
+
+  &:nth-child(5) button {
+    background-image: url(../images/reviews6.jpg);
+  }
+
+  &:nth-child(6) button {
+    background-image: url(../images/reviews1.jpg);
+  }
+
+  &:nth-child(7) button {
+    background-image: url(../images/reviews8.jpg);
+  }
+}

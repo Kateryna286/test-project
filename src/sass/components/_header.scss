@@ -1,0 +1,158 @@
+/* Header */
+.site-header {
+  background-color: white;
+  z-index: 1;
+  border-bottom: 1px solid #ffffff;
+}
+
+.site-header__container {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 79px;
+  padding-top: 33.5px;
+}
+
+@media (max-width: 1343px) {
+  .site-header__container {
+    min-height: 59px;
+  }
+}
+
+/* Логотип */
+.logo {
+  position: relative;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+  font-style: bold;
+  letter-spacing: 0.04em;
+  color: #111518;
+}
+
+.logo--second {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(17, 21, 24, 1);
+}
+
+.logo__icon {
+  position: relative;
+  top: 4px;
+  margin: 0 4px;
+  width: 14.95px;
+  height: 20.39px;
+}
+
+@media screen and (min-width: $tablet) {
+  .logo__icon {
+    width: 22px;
+    height: 30px;
+  }
+}
+
+.logo--accent {
+  color: #ff6b09;
+}
+
+/* Меню в хедері*/
+.menu,
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  list-style: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu__list {
+  margin-left: 104px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1343px) {
+  .menu__list {
+    display: none;
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 0px;
+}
+
+.menu__link {
+  color: #b9b9b9;
+  display: flex;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  padding: 27px;
+  text-transform: uppercase;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: #ff6b09;
+}
+
+/* Кнопка "Консультация по телефону" */
+.consultation__button {
+  right: 95px;
+  top: 33.5px;
+  display: block;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: #ff6b09;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #ff6b09;
+  outline: none;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $light-text-color;
+    background-color: $accent-color;
+  }
+}
+
+@media (max-width: $mobile) {
+  .consultation__button {
+    display: none;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .consultation__button {
+    height: 30px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .consultation__button {
+    width: 336px;
+    height: 79px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: $desktop) {
+  .consultation__button {
+    position: absolute;
+    width: 260px;
+    height: 46px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

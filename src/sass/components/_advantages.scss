@@ -1,0 +1,99 @@
+.section__advantages {
+  display: flex;
+  background-color: $light-text-color;
+  padding-bottom: 50px;
+  @media screen and(min-width: $desktop) {
+    padding-top: 97px;
+    padding-bottom: 130px;
+  }
+}
+
+.advantages {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  @media screen and(min-width: $tablet) {
+    @include flex-center;
+  }
+}
+
+.advantages__item {
+  width: 216px;
+  @media screen and(min-width: $desktop) {
+    width: 448px;
+  }
+}
+
+.advantages__item:not(:last-child) {
+  margin-bottom: 30px;
+  margin-right: 21px;
+  @media screen and(min-width: $tablet) {
+    margin-bottom: unset;
+  }
+  @media screen and(min-width: $desktop) {
+    margin-right: unset;
+  }
+}
+
+.advantages__text {
+  display: flex;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  letter-spacing: 0.08em;
+  @media screen and(min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+
+.advantages__text1::before {
+  display: flex;
+  align-items: center;
+  content: ' ';
+  display: block;
+  background-size: cover;
+  min-width: 59px;
+  height: 60px;
+  margin-right: 10px;
+  background-image: url(../images/icons-svg/advantages-1.svg);
+  @media screen and(min-width: $desktop) {
+    min-width: 100px;
+    height: 102px;
+    margin-right: -18px;
+  }
+}
+
+.advantages__text2::before {
+  content: ' ';
+  display: block;
+  background-size: cover;
+  min-width: 59px;
+  height: 60px;
+  margin-right: 10px;
+  background-image: url(../images/icons-svg/advantages-2.svg);
+  @media screen and(min-width: $desktop) {
+    min-width: 100px;
+    height: 102px;
+    margin-right: -18px;
+  }
+}
+
+.advantages__text3::before {
+  content: ' ';
+  display: flex;
+  background-size: cover;
+  min-width: 59px;
+  height: 60px;
+  margin-right: 10px;
+  background-image: url(../images/icons-svg/advantages-3.svg);
+  @media screen and(min-width: $desktop) {
+    min-width: 100px;
+    height: 102px;
+    margin-right: -18px;
+  }
+}
