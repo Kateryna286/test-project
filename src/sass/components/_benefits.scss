@@ -1,50 +1,19 @@
 .benefits {
-  // background-image: linear-gradient($primary-text-color 50%, $light-text-color 50%);
   position: absolute;
   top: 1446px;
   left: 0;
-}
-
-.benefits__container {
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: $container-padding-mobile;
-
-  @media screen and (max-width: $mobile - 1px) {
-    min-width: 100vw;
-  }
 
   @media screen and (min-width: $mobile) {
-    width: $mobile;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media screen and (min-width: $tablet) {
-    width: $tablet;
-
-    padding: $container-padding-tablet;
+    top: 1070px;
   }
 
   @media screen and (min-width: $desktop) {
-    width: $desktop;
-
-    padding: $container-padding-desktop;
-  }
-}
-
-.benefits__cards {
-  @include flex-center;
-  background-color: $light-text-color;
-  min-width: 280px;
-}
-@media screen and (min-width: $tablet) {
-  .benefits__cards {
-    max-width: 688px;
-  }
-}
-@media screen and (min-width: $desktop) {
-  .benefits__cards {
-    max-width: 1314px;
+    top: 1040px;
   }
 }
 
@@ -84,6 +53,25 @@
   }
 }
 
+.benefits__cards {
+  @include flex-center;
+  background-color: $light-text-color;
+
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  min-width: 280px;
+}
+@media screen and (min-width: $tablet) {
+  .benefits__cards {
+    max-width: 688px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .benefits__cards {
+    max-width: 1314px;
+  }
+}
+
 .benefits__list {
   list-style: none;
   font-size: 14px;
@@ -91,10 +79,14 @@
   line-height: 1.71;
   color: $primary-text-color;
   padding: 20px 30px;
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
   counter-reset: list;
-  width: 100%;
+
+  // @media screen and (min-width: $mobile) and (max-width: $tablet - 1px) {
+  //   padding: 20px 100px;
+  // }
 }
+
 @media screen and (min-width: $tablet) {
   .benefits__list {
     display: flex;
@@ -144,5 +136,30 @@
   .benefits__list li::before {
     font-size: 20px;
     line-height: 1.64;
+  }
+}
+
+.benefits__container {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: $container-padding-mobile;
+
+  @media screen and (max-width: $mobile - 1px) {
+    min-width: 100vw;
+  }
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    padding: $container-padding-tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    padding: $container-padding-desktop;
   }
 }
