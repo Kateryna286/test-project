@@ -87,7 +87,7 @@
   .benefits__list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 96px 26px;
+    padding: 26px 96px;
     justify-content: space-between;
   }
 }
@@ -104,25 +104,33 @@
 .benefits__item {
   max-width: 220px;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media screen and (max-width: $tablet - 1px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
-@media screen and (min-width: $tablet) {
-  .benefits__list li {
-    flex-basis: calc((100% -84px) / 2);
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  .benefits__item {
+    // flex-basis: calc((100% - 84px) / 2);
     max-width: 220px;
-    padding-bottom: 0px;
-    padding-top: 32px;
+
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
   }
 }
 @media screen and (min-width: $desktop) {
-  .benefits__list li {
-    flex-basis: calc((100% -10px) / 3);
-    max-width: 316px;
+  .benefits__item {
+    // flex-basis: calc((100% - 10px) / 3);
+    max-width: 356px;
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 32px;
+    }
   }
 }
-.benefits__list li::before {
+.benefits__item::before {
   display: block;
   content: '— 0 ' counter(list);
   counter-increment: list;
@@ -135,7 +143,7 @@
   margin-bottom: 10px;
 }
 @media screen and (min-width: $desktop) {
-  .benefits__list li::before {
+  .benefits__item::before {
     font-size: 20px;
     line-height: 1.64;
   }
