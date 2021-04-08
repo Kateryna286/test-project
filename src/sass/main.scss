@@ -4,7 +4,9 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './components/reviews';
 @import './utils/variables';
-@import './utils/mixin';
-@import './utils/base';
+@import './utils/mixins';
+@import './base/base';
+@import './utils/container';
+
+@import './components/reviews';
