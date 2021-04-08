@@ -1,5 +1,7 @@
 .review {
-  @include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 50px 0;
 }
 
@@ -99,7 +101,9 @@
   width: 150px;
   height: 150px;
   background-color: tomato;
-  @include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 100px;
   margin: 0 auto;
   margin-top: 15px;
