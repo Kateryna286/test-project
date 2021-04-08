@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: $main-font;
-  font-style: normal;
 }
 
 h1,
@@ -42,4 +41,29 @@ button {
 
 .accent {
   color: $accent-color;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: $container-padding-mobile;
+
+  min-width: 280px;
+
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+
+    padding: $container-padding-tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+
+    padding: $container-padding-desktop;
+  }
 }
