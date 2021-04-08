@@ -2,7 +2,9 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 
 },{}],"ySCt":[function(require,module,exports) {
 function e(e,t,n,r,o,a,s){try{var i=e[a](s),u=i.value}catch(c){return void n(c)}i.done?t(u):Promise.resolve(u).then(r,o)}function t(t){return function(){var n=this,r=arguments;return new Promise(function(o,a){var s=t.apply(n,r);function i(t){e(s,o,a,i,u,"next",t)}function u(t){e(s,o,a,i,u,"throw",t)}i(void 0)})}}function n(){chat_id="-551810818",token="1751285589:AAFlWHWyTBY24QLFgkcm489rwu31Ic90i6U",message="Name: "+document.getElementById("name").value+" Phone: "+document.getElementById("phone").value,$.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id)}document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("form");function r(){return(r=t(regeneratorRuntime.mark(function t(r){return regeneratorRuntime.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:r.preventDefault(),0===o(e)&&(n(),e.classList.add("_sending"),window.setTimeout(function(){e.reset(),e.classList.remove("_sending"),alert("Ваше сообщение отправлено")},2200));case 3:case"end":return t.stop()}},t)}))).apply(this,arguments)}function o(e){for(var t=0,n=document.querySelectorAll("._req"),r=0;r<n.length;r++){var o=n[r];s(o),o.classList.contains("_phone")?i(o)&&(a(o),t++):""===o.value&&(a(o),t++),o.classList.contains("_name")?u(o)&&(a(o),t++):""===o.value&&(a(o),t++)}return t}function a(e){e.parentElement.classList.add("_error"),e.classList.add("_error")}function s(e){e.parentElement.classList.remove("_error"),e.classList.remove("_error")}function i(e){return!/^[\+]?[3]?[8]?[0][0-9]{9}$/.test(e.value)}function u(e){return!/^[A-Za-zА-Яа-яЁёІіЇїЄє]{1,}$/.test(e.value)}e.addEventListener("submit",function(e){return r.apply(this,arguments)})});
+},{}],"ibtk":[function(require,module,exports) {
+$(".slider").slick({dots:!0,infinite:!0,speed:300});
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss"),require("./js/send");
-},{"./sass/main.scss":"clu1","./js/send":"ySCt"}]},{},["Focm"], null)
-//# sourceMappingURL=/test-project/src.95c72b69.js.map
+"use strict";require("./sass/main.scss"),require("./js/send"),require("./js/slick.script");
+},{"./sass/main.scss":"clu1","./js/send":"ySCt","./js/slick.script":"ibtk"}]},{},["Focm"], null)
+//# sourceMappingURL=/test-project/src.ecd3c94e.js.map
