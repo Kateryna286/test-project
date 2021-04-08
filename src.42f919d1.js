@@ -7,4 +7,4 @@ $(".slider").slick({dots:!0,infinite:!0,speed:300});
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/send"),require("./js/slick.script");
 },{"./sass/main.scss":"clu1","./js/send":"ySCt","./js/slick.script":"ibtk"}]},{},["Focm"], null)
-//# sourceMappingURL=/test-project/src.ecd3c94e.js.map
+//# sourceMappingURL=/test-project/src.42f919d1.js.map
