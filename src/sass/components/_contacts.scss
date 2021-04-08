@@ -78,6 +78,23 @@
   }
 }
 
+.contacts__form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(17, 21, 24, 0.8) url('../images/spinner.gif') center / 70px no-repeat;
+}
+
+.contacts__form._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .contacts__label {
   min-width: 280px;
   font-weight: 600;
@@ -164,11 +181,11 @@
 }
 
 .contacts__input:not(:placeholder-shown):required:valid {
-  border-color: rgb(109, 170, 109);
+  border-color: rgba(219, 169, 113, 1);
 }
 
 .contacts__input:not(:placeholder-shown):required:invalid {
-  border-color: rgb(175, 57, 57);
+  border-color: rgba(168, 30, 30, 1);
 }
 
 .contacts__btn {
@@ -187,9 +204,4 @@
     height: 70px;
     margin-top: 80px;
   }
-
-  // &:hover,
-  // &:focus {
-  //   background-color: $light-text-color;
-  // }
 }
