@@ -53,6 +53,7 @@
   padding: 25px;
 
   text-align: center;
+  outline: none;
 
   @media (max-width: 767px) {
     padding: 10px;
@@ -115,9 +116,11 @@
   @include transition(background-color);
   @include transition(color);
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 2px solid black;
     background-color: red;
+    outline: none;
   }
 
   & span {
